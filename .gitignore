@@ -1,0 +1,46 @@
+# Node & Bun modules and Bun cache
+node_modules/
+.bun/
+
+# Build output
+build/
+dist/
+.svelte-kit/
+.vite/
+
+# Logs
+*.log
+npm-debug.log*
+bun-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Env and config files
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
+
+# IDEs
+.vscode/
+.idea/
+
+# SvelteKit preview output
+.netlify/
+.vercel/
+
+# Swap files (Linux/macOS)
+*.swp
+
+# Coverage
+coverage/
+
+# Ensure Bun lockfile is included
+!bun.lockb

@@ -5,8 +5,14 @@ import type { Database } from '$lib/db/types';
 type Post = Database['public']['Tables']['posts']['Row'];
 
 export const load: PageLoad = async () => {
-    const { data } = await supabase.from("posts").select();
+    const { data, error } = await supabase.from("posts").select();
+    
+    if (error) {
+        console.error('Error loading posts:', error);
+        return { posts: [] as Post[] };
+    }
+    
     return {
-      posts: data as Post[] ?? [],
+        posts: (data as Post[]) ?? []
     };
-  }
+};
